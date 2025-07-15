@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DEPLOY_DIR = "D:\\ThietBi\\index"  
+        DEPLOY_DIR = "D:\\ThietBi\\index"  // dùng / hoặc \\ đều được
+    }
 
     stages {
         stage('Clone code từ GitHub') {
