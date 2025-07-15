@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản Lý Thiết Bị Nhà Trường</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🛠️ Quản Lý Thiết Bị Nhà Trường</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li class="active">Dashboard</li>
+      <li>Quản lý thiết bị</li>
+      <li>Thống kê</li>
+      <li>Loại thiết bị</li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="dashboard">
+      <h2>Tổng quan hệ thống</h2>
+      <div class="stats">
+        <div class="card">
+          <h3>150</h3>
+          <p>Thiết bị đang sử dụng</p>
+        </div>
+        <div class="card">
+          <h3>35</h3>
+          <p>Thiết bị hỏng</p>
+        </div>
+        <div class="card">
+          <h3>20</h3>
+          <p>Đang bảo trì</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="device-manager">
+      <h2>Quản lý thiết bị</h2>
+      <form id="deviceForm">
+        <input type="text" placeholder="Tên thiết bị" id="deviceName" required />
+        <input type="text" placeholder="Phòng ban" id="deviceLocation" required />
+        <input type="date" id="deviceDate" />
+        <button type="submit">Thêm thiết bị</button>
+      </form>
+
+      <table id="deviceTable">
+        <thead>
+          <tr>
+            <th>Tên thiết bị</th>
+            <th>Phòng ban</th>
+            <th>Ngày thêm</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Trường Đại học CMC - Fake Jenkins Inc.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
