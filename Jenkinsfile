@@ -18,5 +18,18 @@ pipeline {
                 bat "xcopy * %DEPLOY_DIR% /E /Y /I"
             }
         }
+        stage('Deploy to IIS') {
+            steps {
+                powershell '''
+               
+        
+                Import-Module WebAdministration
+                if (-not (Test-Path IIS:\\Sites\\MySite123)) {
+                    New-Website -Name "MySite82" -Port 82 -PhysicalPath "D:\\ThietBi\\index"
+                }
+                '''
+            }
+        } // end deploy iis
+
     }
 }  // 👈👈 DẤU NÀY LÀ QUAN TRỌNG NHẤT! Dấu đóng cuối file!
