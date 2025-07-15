@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DEPLOY_DIR = "D:\\ThietBi\\index"  // dùng / hoặc \\ đều được
+        DEPLOY_DIR = "D:\\ThietBi\\index"  // hoặc dùng D:\\ThietBi\\index nếu muốn
     }
 
     stages {
@@ -19,4 +19,4 @@ pipeline {
             }
         }
     }
-}
+}  // 👈👈 DẤU NÀY LÀ QUAN TRỌNG NHẤT! Dấu đóng cuối file!
