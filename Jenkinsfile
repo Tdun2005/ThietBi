@@ -2,8 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DEPLOY_DIR = "D:\ThietBi\index"
-    }
+        DEPLOY_DIR = "D:\\ThietBi\\index"  
 
     stages {
         stage('Clone code từ GitHub') {
@@ -14,7 +13,7 @@ pipeline {
 
         stage('Deploy vào IIS folder') {
             steps {
-                bat "echo Đang deploy vào thư mục %DEPLOY_DIR%"
+                bat "echo Deploying vào thư mục %DEPLOY_DIR%"
                 bat "xcopy * %DEPLOY_DIR% /E /Y /I"
             }
         }
